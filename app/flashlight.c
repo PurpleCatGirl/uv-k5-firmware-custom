@@ -54,7 +54,7 @@ void ACTION_FlashLight(void)
 			gFlashLightState++;
 			GPIO_SetBit(&GPIOC->DATA, GPIOC_PIN_FLASHLIGHT);
 			break;
-		case FLASHLIGHT_ON:
+//		case FLASHLIGHT_ON:
 //		case FLASHLIGHT_BLINK:
 			gFlashLightState++;
 			break;
