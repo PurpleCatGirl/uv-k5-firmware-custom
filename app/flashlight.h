@@ -8,8 +8,8 @@
 enum FlashlightMode_t {
     FLASHLIGHT_OFF = 0,
     FLASHLIGHT_ON,
-    FLASHLIGHT_BLINK,
-    FLASHLIGHT_SOS
+//    FLASHLIGHT_BLINK,
+//    FLASHLIGHT_SOS
 };
 
 extern enum FlashlightMode_t gFlashLightState;
