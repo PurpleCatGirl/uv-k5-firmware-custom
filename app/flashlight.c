@@ -6,7 +6,7 @@
 #include "flashlight.h"
 
 enum FlashlightMode_t  gFlashLightState;
-
+/*
 void FlashlightTimeSlice()
 {
 	if (gFlashLightState == FLASHLIGHT_BLINK && (gFlashLightBlinkCounter & 15u) == 0) {
@@ -44,7 +44,7 @@ void FlashlightTimeSlice()
 		}
 	}
 }
-
+*/
 void ACTION_FlashLight(void)
 {
 	switch (gFlashLightState) {
@@ -53,10 +53,10 @@ void ACTION_FlashLight(void)
 			GPIO_SetBit(&GPIOC->DATA, GPIOC_PIN_FLASHLIGHT);
 			break;
 		case FLASHLIGHT_ON:
-		case FLASHLIGHT_BLINK:
+//		case FLASHLIGHT_BLINK:
 			gFlashLightState++;
 			break;
-		case FLASHLIGHT_SOS:
+//		case FLASHLIGHT_SOS:
 		default:
 			gFlashLightState = 0;
 			GPIO_ClearBit(&GPIOC->DATA, GPIOC_PIN_FLASHLIGHT);
