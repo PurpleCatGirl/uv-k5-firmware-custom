@@ -6,10 +6,10 @@
 #include "flashlight.h"
 
 enum FlashlightMode_t  gFlashLightState;
-/*
+
 void FlashlightTimeSlice()
 {
-	if (gFlashLightState == FLASHLIGHT_BLINK && (gFlashLightBlinkCounter & 15u) == 0) {
+/*	if (gFlashLightState == FLASHLIGHT_BLINK && (gFlashLightBlinkCounter & 15u) == 0) {
 		GPIO_FlipBit(&GPIOC->DATA, GPIOC_PIN_FLASHLIGHT);
 		return;
 	}
@@ -42,9 +42,9 @@ void FlashlightTimeSlice()
 			}
 			c++;
 		}
-	}
+	}*/
 }
-*/
+
 void ACTION_FlashLight(void)
 {
 	switch (gFlashLightState) {
